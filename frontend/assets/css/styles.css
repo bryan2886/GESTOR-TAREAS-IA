@@ -1,0 +1,164 @@
+:root {
+    --color-principal: #4D9657;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: "Montserrat",sans-serif;
+    font-size: 1.6rem;
+    background-color: #F4F7F9;
+    color: #333;
+    min-height: 100vh;
+}
+
+.layout{
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.layout_title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--color-principal);
+    text-shadow: 1px 1px 3px #ccc;
+}
+
+.layout_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding:  2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px #ccc;
+}
+
+.form_control{
+    width: 100%;
+}
+
+.form_label{
+    color: #333;
+    margin-bottom:0.5rem;
+    font-weight: 600;
+}
+
+.form_input{
+    font-size: 1.6rem;
+    width: 95%;
+    padding: 1rem;
+    border: 2px solid #d4d4d4;
+    border-radius: 8px;
+    outline: none;
+    transition: all300ms ease;
+}
+
+.form_input:focus{
+    border-color: var(--color-principal) ;
+}
+
+.form_submit{
+    width: 30%;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    border:none;
+    background-color: var(--color-principal);
+    color: #fff;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.form_submit:hover{
+    background-color: #366b3d;
+}
+
+.layout_task{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tasks_item{
+    display: flex;
+    flex-direction:column;
+    gap: 1rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 7px 15px #ddd;
+
+}
+
+.task_days{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap:0.5rem;
+}
+
+.days_number{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-principal);
+}
+
+.days_text{
+    font-size: 1.6rem;
+    font-weight:500;
+    color: #666;
+}
+
+.task_body{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.task_date{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--color-principal);
+}
+
+.tasks_buttons{
+    display: flex;
+    gap: 1rem;
+    margin-top:  0.5rem;
+}
+
+.tasks_btn-help,
+.task_btn-delete{
+    padding:  0.7rem 1rem;
+    border-radius:  8px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 300ms linear;
+    border: none;
+    color: white;
+
+}
+
+.task_btn-delete{
+    background-color: #FF3F3F;
+}
+
+.task_btn-delete:hover{
+    background-color: #cf3434;
+    color: white;
+}
+
+.tasks_btn-help{
+    background-color: #0056FF;
+}
+.tasks_btn-help:hover{
+    background-color: #044bd8;
+}

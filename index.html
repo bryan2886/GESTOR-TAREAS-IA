@@ -3,48 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuentes -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+
+    <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
-    <script src="./frontend/js/main.js"></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./frontend/assets/css/styles.css">
+
     <title>Gestor de tareas con IA</title>
 </head>
 <body>
     <div class="layout">
         <h1 class="layout_title">Tareas</h1>
+
         <form class="layout_form">
+            
+            <div class="form_control">
+                <label class="form_label" for="task">¿Qué quieres hacer?</label>
+            </div>
+
             <div class="form_control"> 
-                <labe class="form_label" for="task">¿Que quieres hacer?</labe>
                 <input class="form_input" type="text" name="task" id="task" required>
             </div>
+        
+            <div class="form_control">
+                <label class="form_label" for="date">¿Cuándo lo quieres hacer?</label>
+            </div>
             <div class="form_control"> 
-                <labe class="form_label" for="date">¿Cuando lo quieres hacer?</labe>
                 <input class="form_input" type="date" name="date" id="date" required>
             </div>
 
             <input class="form_submit" type="submit" value="Guardar">
         </form>
 
-        <section class="layaut_task">
+        <section class="layout_task">
             <article class="task_item">
                 <div class="task_days">
                     <span class="days_text">Faltan</span>
-                    <p class="days_numbers">7</p>
+                    <p class="days_number">7</p>
                     <span class="days_text">días</span>
                 </div>
 
-                <p class="task_body">Tarea que tengo que hacer proximamente</p>
+                <p class="task_body">Tarea que tengo que hacer próximamente</p>
                 <p class="tasks_date">11-11-11</p>
+
                 <div class="task_buttons"> 
-                    <button class="tasks_btn-help" data-task="texto para enviar a mi js">¿Como hacerlo?</button>
+                    <button class="tasks_btn-help" data-task="texto para enviar a mi js">
+                        ¿Cómo hacerlo?
+                    </button>
+
                     <button class="task_btn-delete" data-id="id de la tarea">
                         <i class="fa-solid fa-trash"></i>
-                        <p class="task_exp">explicacion</p>
+                        <span class="task_exp">explicación</span>
                     </button>
                 </div>
-
             </article>
-
         </section>
     </div>
+
+    
+    <script src="./frontend/js/main.js"></script>
 </body>
 </html>
