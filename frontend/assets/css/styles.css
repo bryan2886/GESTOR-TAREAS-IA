@@ -162,3 +162,17 @@ body{
 .tasks_btn-help:hover{
     background-color: #044bd8;
 }
+
+.tasks_exp{
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;  
+    background-color: #F0f4ff;
+    border-left: 4px solid #0056FF;
+    boder-radius: 8px;
+    font-size: 1.5rem;
+    color:#333;
+    line-height: 1.5;
+    transition: all 300ms ease;
+}
+

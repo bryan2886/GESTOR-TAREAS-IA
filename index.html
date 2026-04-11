@@ -21,19 +21,16 @@
 
         <form class="layout_form">
             
+            
+
             <div class="form_control">
                 <label class="form_label" for="task">¿Qué quieres hacer?</label>
+                <input class="form_input" type="text" name="task" id="input_task" required>
             </div>
 
             <div class="form_control"> 
-                <input class="form_input" type="text" name="task" id="task" required>
-            </div>
-        
-            <div class="form_control">
-                <label class="form_label" for="date">¿Cuándo lo quieres hacer?</label>
-            </div>
-            <div class="form_control"> 
-                <input class="form_input" type="date" name="date" id="date" required>
+                <label class="form_label" for="input_date">¿Cuándo lo quieres hacer?</label>
+                <input class="form_input" type="date" name="date" id="input_date" required>
             </div>
 
             <input class="form_submit" type="submit" value="Guardar">
@@ -57,9 +54,9 @@
 
                     <button class="task_btn-delete" data-id="id de la tarea">
                         <i class="fa-solid fa-trash"></i>
-                        <span class="task_exp">explicación</span>
                     </button>
                 </div>
+                <p class="tasks_exp">Hola que tal como estas</p>
             </article>
         </section>
     </div>
