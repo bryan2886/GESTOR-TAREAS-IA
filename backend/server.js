@@ -54,6 +54,7 @@ app.post("/how-to",async (req,res)=>{
         return res.status(500).json({
             error: "Error al procesar la solicitud",
             details: error.message,
+            
         })
 
     }

@@ -29,39 +29,22 @@
             </div>
 
             <div class="form_control"> 
-                <label class="form_label" for="input_date">¿Cuándo lo quieres hacer?</label>
-                <input class="form_input" type="date" name="date" id="input_date" required>
+                <label class="form_label"  for="input_date">¿Cuándo lo quieres hacer?</label>
+                <input class="form_input" min type="date" name="date" id="input_date" required>
             </div>
 
             <input class="form_submit" type="submit" value="Guardar">
         </form>
 
         <section class="layout_task">
-            <article class="task_item">
-                <div class="task_days">
-                    <span class="days_text">Faltan</span>
-                    <p class="days_number">7</p>
-                    <span class="days_text">días</span>
-                </div>
-
-                <p class="task_body">Tarea que tengo que hacer próximamente</p>
-                <p class="tasks_date">11-11-11</p>
-
-                <div class="task_buttons"> 
-                    <button class="tasks_btn-help" data-task="texto para enviar a mi js">
-                        ¿Cómo hacerlo?
-                    </button>
-
-                    <button class="task_btn-delete" data-id="id de la tarea">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                </div>
-                <p class="tasks_exp">Hola que tal como estas</p>
-            </article>
+            <!--  -->
         </section>
     </div>
 
     
     <script src="./frontend/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-loading-overlay@1.2.0/dist/js-loading-overlay.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>
