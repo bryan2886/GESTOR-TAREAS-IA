@@ -1,0 +1,22 @@
+services:
+  backend:
+    build: ./backend
+    image: bandres28/gestor-tareas-ia-backend:latest
+    container_name: gestor-tareas-ia-backend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./backend/.env
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bandres28/gestor-tareas-ia-frontend:latest
+    container_name: gestor-tareas-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

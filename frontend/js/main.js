@@ -158,7 +158,7 @@ window.addEventListener("load", () => {
 
                 try {
                     loader(true);
-                    const response = await fetch("http://localhost:3000/how-to", {
+                    const response = await fetch(`${API_URL}/how-to`, {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({ task: btnHelp.getAttribute("data-task") })
