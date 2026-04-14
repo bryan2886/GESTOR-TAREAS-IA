@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
     //variables elementos del DOM
     const formTask = document.querySelector(".layout_form");
     const inputTask = document.querySelector("#input_task");
-    const inputDate = document.querySelector("#input_date");
+    const inputDate = document.querySelector("#input_date")
     const tasksContainer = document.querySelector(".layout_task");
     const today = new Date().toISOString().split("T")[0];
     inputDate.min = today;
@@ -99,14 +99,13 @@ window.addEventListener("load", () => {
     }
 
     function daysPending(userDate) {
-        let maxDate = new Date(userDate);
+        let maxDate = new Date(userDate + 'T00:00:00');
         let today = new Date();
+        today.setHours(0, 0, 0, 0);
         let difference = maxDate.getTime() - today.getTime();
 
         let result = Math.ceil(difference / (1000 * 3600 * 24));
         return result;
-
-
     }
 
     function deleteTask() {
