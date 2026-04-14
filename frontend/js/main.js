@@ -82,6 +82,10 @@ window.addEventListener("load", () => {
                         ¿Cómo hacerlo?
                     </button>
 
+                    <button class="tasks_btn-edit" style="display: none;" data-id="${task.id}">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+
                     <button class="tasks_btn-delete" data-id="${task.id}">
                         <i class="fa-solid fa-trash"></i>
                     </button>
@@ -94,7 +98,8 @@ window.addEventListener("load", () => {
         deleteTask()
         //Como hacer tarea
         howToDo();
-
+        //Editar tarea
+        editTask();
 
     }
 
@@ -147,6 +152,20 @@ window.addEventListener("load", () => {
 
     }
 
+    function editTask() {
+        document.querySelectorAll(".tasks_btn-edit").forEach((btnEdit)=>{
+            btnEdit.addEventListener("click",()=>{
+                const taskId = parseInt(btnEdit.getAttribute("data-id"));
+                const index =  tasks.find(task => task.id === taskId);
+                console.log(index);
+                if (index !== -1){
+                    
+                }
+            })
+        })
+
+    }
+
     async function howToDo() {
         document.querySelectorAll(".tasks_btn-help").forEach((btnHelp) => {
             btnHelp.addEventListener("click", async () => {
@@ -180,6 +199,8 @@ window.addEventListener("load", () => {
 
 
     }
+
+    
 
 
 })

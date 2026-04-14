@@ -135,6 +135,7 @@ body {
 }
 
 .tasks_btn-help,
+.tasks_btn-edit,
 .tasks_btn-delete {
     padding: 0.7rem 1rem;
     border-radius: 8px;
@@ -153,11 +154,14 @@ body {
 
 .tasks_btn-delete:hover {
     background-color: #cf3434;
-    color: white;
 }
 
 .tasks_btn-help {
     background-color: #0056FF;
+}
+
+.tasks_btn-edit{
+    background-color: #4D9657;
 }
 
 .tasks_btn-help:hover {
