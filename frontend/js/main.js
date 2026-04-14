@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
     //variables elementos del DOM
     const formTask = document.querySelector(".layout_form");
     const inputTask = document.querySelector("#input_task");
-    const inputDate = document.querySelector("#input_date");
+    const inputDate = document.querySelector("#input_date")
     const tasksContainer = document.querySelector(".layout_task");
     const today = new Date().toISOString().split("T")[0];
     inputDate.min = today;
@@ -82,6 +82,10 @@ window.addEventListener("load", () => {
                         ¿Cómo hacerlo?
                     </button>
 
+                    <button class="tasks_btn-edit" style="display: none;" data-id="${task.id}">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+
                     <button class="tasks_btn-delete" data-id="${task.id}">
                         <i class="fa-solid fa-trash"></i>
                     </button>
@@ -94,19 +98,19 @@ window.addEventListener("load", () => {
         deleteTask()
         //Como hacer tarea
         howToDo();
-
+        //Editar tarea
+        editTask();
 
     }
 
     function daysPending(userDate) {
-        let maxDate = new Date(userDate);
+        let maxDate = new Date(userDate + 'T00:00:00');
         let today = new Date();
+        today.setHours(0, 0, 0, 0);
         let difference = maxDate.getTime() - today.getTime();
 
         let result = Math.ceil(difference / (1000 * 3600 * 24));
         return result;
-
-
     }
 
     function deleteTask() {
@@ -148,6 +152,20 @@ window.addEventListener("load", () => {
 
     }
 
+    function editTask() {
+        document.querySelectorAll(".tasks_btn-edit").forEach((btnEdit)=>{
+            btnEdit.addEventListener("click",()=>{
+                const taskId = parseInt(btnEdit.getAttribute("data-id"));
+                const index =  tasks.find(task => task.id === taskId);
+                console.log(index);
+                if (index !== -1){
+                    
+                }
+            })
+        })
+
+    }
+
     async function howToDo() {
         document.querySelectorAll(".tasks_btn-help").forEach((btnHelp) => {
             btnHelp.addEventListener("click", async () => {
@@ -181,6 +199,8 @@ window.addEventListener("load", () => {
 
 
     }
+
+    
 
 
 })

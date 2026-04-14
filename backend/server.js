@@ -58,9 +58,7 @@ app.post("/how-to",async (req,res)=>{
         })
 
     }
-    return res.json({
-        text: "holaa",
-    });
+    
 })
 
 app.listen(3000,()=>{
